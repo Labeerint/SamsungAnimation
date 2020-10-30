@@ -1,0 +1,176 @@
+img{
+    max-width: 100%;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    position: relative;
+    height: 750px;
+    width: 300px;
+    animation: rotate 0.3s linear;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(90deg)}
+}
+
+.samsung{
+    position: absolute;
+}
+
+
+.screen{
+    padding: 0;
+    border: 1px solid #000;
+    margin-left: 2px;
+    margin-top: 5px;
+    position: absolute;
+    height: 483px;
+    width: 279px;
+    overflow: hidden;
+    /* background: #FE7B05; */
+}
+
+.blackscreen{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 102%;
+    background: #000;
+    animation: blackscreen .2s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@keyframes blackscreen {
+    0%{opacity: 1}
+    100%{opacity: 0}
+}
+
+.line{
+    margin-top: -5px;
+    display: flex;
+    animation: screen 5s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+@keyframes screen {
+    0%{ transform: translateX(0)}
+    5%{ transform: translateX(-100%)}
+    50%{ transform: translateX(-100%)}
+    55%{ transform: translateX(-200%)}
+    100%{ transform: translateX(-200%)}
+}
+
+.loading{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    animation: loading 3s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+    visibility: hidden;
+}
+
+@keyframes loading {
+    0%{visibility: visible;}
+    100%{visibility: hidden;}
+}
+
+.game{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: game 15s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 10s;
+    visibility: hidden;
+}
+
+@keyframes game {
+    0%{visibility: visible;}
+    100%{visibility: hidden;}
+}
+
+.lock{
+    width: 110%;
+    height: 103%;
+    position: absolute;
+    top: 0;
+    background: #000;
+    animation: lock .5s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 24s;
+    opacity: 0;
+}
+
+@keyframes lock {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.hand{
+    position: absolute;
+    top: 0;
+    animation: hand 25s linear;
+    transform: translate(120px, 680px);
+    /* transform: translate(150px, 530px) rotate(10deg); */
+}
+
+@keyframes hand {
+    0%{transform: translate(120px, 680px);}
+    2%{transform: translate(120px, 680px);}
+    3%{transform: translate(120px, 640px);}
+    4%{transform: translate(120px, 680px);}
+    10%{transform: translate(120px, 680px);}
+    12%{transform: translate(170px, 450px) rotate(10deg);}
+    13%{transform: translate(170px, 450px) rotate(-5deg);}
+    14%{transform: translate(170px, 450px) rotate(-5deg);}
+    21%{transform: translate(170px, 450px) rotate(-5deg);}
+    22%{transform: translate(170px, 450px) rotate(10deg);}
+    23%{transform: translate(170px, 450px) rotate(-5deg);}
+    25%{transform: translate(170px, 450px) rotate(-5deg);}
+    26%{transform: translate(150px, 450px) rotate(-5deg);}
+    27%{transform: translate(150px, 450px) rotate(-5deg);}
+    29%{transform: translate(150px, 500px) rotate(-5deg);}
+    40%{transform: translate(150px, 500px) rotate(-5deg);}
+    45%{transform: translate(-15px, 380px) rotate(0deg);}
+    50%{transform: translate(-15px, 380px) rotate(0deg);}
+    51%{transform: translate(0px, 380px) rotate(-5deg);}
+    52%{transform: translate(0px, 390px) rotate(-5deg);}
+    53%{transform: translate(150px, 540px) rotate(-5deg);}
+    95%{transform: translate(150px, 540px) rotate(-5deg);}
+    96%{transform: translate(150px, 530px) rotate(10deg)}
+
+}
